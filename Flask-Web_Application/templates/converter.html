@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block Content %}
+<div class="container home text-center">
+
+    <h1>Convert Your Images</h1><hr>
+    <br>
+    <p class="fs-5 ">Choose image to convert from PNG to JPEG or JPEG to PNG</p>
+    <br>
+    <div class="mb-5">
+        <form action="{{url_for('converter')}}" method="post" enctype = 'multipart/form-data'>
+            
+            <label class="btn btn-primary btn-lg px-4 p-3"><input type="file" id="img" name="img" accept="image/*" ></label>
+            
+            <div class="container m-3">
+            <input type="submit" class="btn btn-success btn-lg px-4 p-3 ms-3" value="Convert Image">
+            
+            
+
+            </div>
+        </form>
+        
+    </div>
+
+</div>
+{% endblock  %}

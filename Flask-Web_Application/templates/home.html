@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block Content %}
+<div class="container home">
+
+    <h1>Image Compressor and Converter</h1><hr>
+    <br>
+    <p class="fs-5 col-md-8">Compress your PNG or JPEG images to the desired size and also Convert Your PNG image to JPEG image and JPEG image to PNG image.</p>
+    <br>
+    <div class="mb-5">
+        <a href="{{ url_for('compressor') }}" class="btn btn-success btn-lg px-4 p-3">Compress Image</a>
+        <a href="{{ url_for('converter') }}" class="btn btn-success btn-lg px-4 ms-4 p-3">Convert Image</a>
+
+    </div>
+
+</div>
+{% endblock  %}
