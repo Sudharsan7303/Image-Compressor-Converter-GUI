@@ -23,7 +23,7 @@ def compressor():
             qual=request.form["quality"]
         
             path=Compress(image,qual)
-            return send_file(path,as_attachment=True)
+            return send_file(path,as_attachment=True) 
 
         else:
 
@@ -38,9 +38,12 @@ def converter():
         image=None
         if request.method == 'POST':
             image=request.files["img"]
+            
         
             path=Convert(image)
-            return send_file(path,as_attachment=True)
+            
+            return  send_file(path,as_attachment=True) 
+            
 
 
         else:
